@@ -1,4 +1,4 @@
-import logements from '../assets/data/logements.json'
+import logements from '/src/assets/data/logements.json'
 import { Link } from "react-router-dom"
 
 export default function Home() {
