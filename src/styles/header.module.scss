@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+    margin: auto;
+    nav {
+        display: flex;
+        gap: 57px;
+        a {
+            font-size: 24px;
+            font-weight: 500;
+            color: black;
+        }
+    }
+}
+
