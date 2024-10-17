@@ -1,6 +1,12 @@
+import logowhite from '../assets/images/logowhite.svg'
+import styles from '../styles/footer.module.scss'
+
 function Footer() {
     return (
-        <p>Footer</p>
+        <div className={styles.container}>
+            <img src={logowhite} alt="Logo de Kasa"></img>
+            <p>© 2020 Kasa. All rights reserved</p>
+        </div>
     )
 }
 
