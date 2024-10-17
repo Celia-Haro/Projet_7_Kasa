@@ -1,5 +1,5 @@
-// import logowhite from '../assets/images/logowhite.svg'
-// import styles from './components/footer/footer.module.scss'
+import logowhite from '/src/assets/images/logowhite.svg'
+import styles from '/src/components/footer/footer.module.scss'
 
 function Footer() {
     return (

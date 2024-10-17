@@ -1,11 +1,13 @@
-import Banner from "../components/Banner"
 import logements from '../assets/data/logements.json'
 import { Link } from "react-router-dom"
 
 export default function Home() {
     return (
         <>
-            <Banner />
+            <div className="banner-container">
+                <img src="" alt="je suis une image" />
+                <h1>Chez vous, partout et ailleurs</h1>
+            </div>
             <div>
                 {/* 1 card / Item ( logements.json) */}
                 <article> <Link to="/lodgingdetail">Je suis une carte logement!</Link></article>
