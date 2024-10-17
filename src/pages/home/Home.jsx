@@ -1,11 +1,13 @@
 import logements from '/src/assets/data/logements.json'
 import { Link } from "react-router-dom"
+import styles from '/src/pages/home/home.module.scss'
+import picture1 from '/src/assets/images/pictures/image1.png'
 
 export default function Home() {
     return (
         <>
-            <div className="banner-container">
-                <img src="" alt="je suis une image" />
+            <div className={styles.banner}>
+                <img src={picture1} alt="je suis une image" />
                 <h1>Chez vous, partout et ailleurs</h1>
             </div>
             <div>
