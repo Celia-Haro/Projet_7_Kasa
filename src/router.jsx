@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <About />
+                element: <About />,
             },
             {
                 path: '/lodgingdetail',
@@ -26,5 +26,4 @@ export const router = createBrowserRouter([
             }
         ]
     }
-
 ])
