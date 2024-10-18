@@ -29,4 +29,14 @@
     }
 }
 
-    
+.cardContainer {
+    // display: grid; ??
+    box-sizing: border-box;
+    max-width: 1240px;
+    width: 86%;
+    margin: auto;
+    background: #F6F6F6;
+    border-radius: 25px;
+    padding: 30px;
+   
+}
