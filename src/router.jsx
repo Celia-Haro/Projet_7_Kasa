@@ -3,7 +3,8 @@ import App from './App'
 import Home from './pages/home/Home'
 import About from "./pages/about/About"
 import ErrorPage from "./pages/errorPage/ErrorPage"
-import LodgingDetail from "./pages/rentalDetail/RentalDetail"
+import RentalDetail from "./pages/rentalDetail/RentalDetail"
+// import { logement } from "./assets/data/logements.json"
 
 
 export const router = createBrowserRouter([
@@ -21,8 +22,8 @@ export const router = createBrowserRouter([
                 element: <About />,
             },
             {
-                path: '/lodgingdetail',
-                element: <LodgingDetail />
+                path: `/rentaldetail/`,
+                element: <RentalDetail />
             }
         ]
     }

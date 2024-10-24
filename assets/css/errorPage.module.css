@@ -1,0 +1,22 @@
+.errorPage {
+  height: 100vh;
+  justify-content: stretch;
+  align-items: stretch;
+  display: flex;
+}
+
+.errorContainer h1 {
+  font-size: 288px;
+  color: #FF6060;
+  margin: auto;
+}
+.errorContainer p {
+  font-size: 36px;
+  color: #FF6060;
+  margin: 50px;
+}
+.errorContainer a {
+  color: black;
+  font-size: 18px;
+  text-decoration: underline;
+}

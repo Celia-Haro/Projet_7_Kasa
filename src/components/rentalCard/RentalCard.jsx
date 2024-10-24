@@ -1,10 +1,11 @@
 import styles from './rentalCard.module.scss'
 
-export default function RentalCard() {
+export default function RentalCard({ logement }) {
     return (
         <div className={styles.card}>
-            <img src="" alt="Ca doit correspondre au cover de chaque rental cover" />
-            <h3>Titre de la location</h3>
-        </div>
+            <img src={logement.cover} alt={`Cover de ${logement.title}`} />
+            <h3>{logement.title}</h3>
+        </div >
+
     )
 }

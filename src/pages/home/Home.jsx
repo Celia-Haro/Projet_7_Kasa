@@ -12,13 +12,11 @@ export default function Home() {
                 <h1>Chez vous, partout et ailleurs</h1>
             </div>
             <div className={styles.cardContainer}>
-                {/* 1 card / Item ( logements.json) */}
-                <article> <Link to="/lodgingdetail">Je suis une carte logement!</Link></article>
                 {logements.map((logement) => (
-                    <article key={logement.id}>{logement.title}</article>
+                    <RentalCard key={logement.id} logement={logement} />
                 ))
                 }
-                <RentalCard></RentalCard>
+
             </div>
         </>
     )
