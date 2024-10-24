@@ -1,5 +1,5 @@
 import logements from '/src/assets/data/logements.json'
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import styles from '/src/pages/home/home.module.scss'
 import picture1 from '/src/assets/images/pictures/image1.png'
 import RentalCard from '/src/components/rentalCard/RentalCard'
