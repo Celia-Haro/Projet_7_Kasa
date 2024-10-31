@@ -1,0 +1,15 @@
+@use "./styles/mixins";
+
+
+.appContainer {
+    @include mixins.flexbox(column);
+    min-height: 100vh;
+}
+
+.contentContainer {
+    display: flex;
+    flex-grow: 1;
+    margin: auto;
+    width: 100%;
+    
+}
