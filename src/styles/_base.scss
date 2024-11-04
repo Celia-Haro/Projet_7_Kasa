@@ -32,3 +32,12 @@ body {
   img {
     max-width: 100%;
   }
+
+  a {
+    text-decoration: inherit;
+    color: $dark-text-color;
+  }
+
+  .active {
+    text-decoration: underline;
+    }

@@ -1,18 +1,36 @@
 @use "../../styles/mixins";
+@use "../../styles/variables" as *;
 
 .container {
-   @include mixins.flexbox();
-    padding: 20px;
+   @include mixins.flexbox(row, space-between);
+    padding: $spacing-xxl;
     max-width: 1240px;
-    // width: 86%;
+    width: 100%;
     margin: auto;
+    @include mixins.small-screen {
+        padding: $spacing-m ;
+    }
+    img {
+        @include mixins.small-screen {
+            width: 145px;
+        }
+    }
     nav {
-        display: flex;
-        gap: 57px;
+        @include mixins.flexbox(row, flex-start, center);
+        gap: $spacing-section;
+        @include mixins.small-screen {
+            gap: $spacing-xxl;
+        }
         a {
-            font-size: 24px;
-            font-weight: 500;
-            color: black;
+            font-size: $font-size-xl;
+            font-weight: $font-weight-m;
+            @include mixins.medium-screen {
+                font-size: $font-size-l;
+                text-transform: uppercase;
+            }
+            @include mixins.small-screen {
+                font-size: $font-size-xs;
+            }
         }
     }
 }
