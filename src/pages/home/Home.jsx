@@ -12,6 +12,13 @@ export default function Home() {
                     <span>partout et ailleurs</span>
                 </h1>
             </div>
+            <div className={styles.cardContainer}>
+                {/* {logements.map((logement) => (
+                    <RentalCard key={logement.id} logement={logement} />
+                ))
+                } */}
+
+            </div>
         </>
     )
 }
