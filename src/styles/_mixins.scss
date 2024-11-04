@@ -27,8 +27,15 @@
   }
   
   @mixin large-screen {
-    @media (min-width: 1025px) {
+    @media (max-width: 1300px) {
       @content;
     }
   }
+
+    @mixin xlarge-screen {
+      @media (min-width: 1301px) {
+        @content;
+      }
+    }
+  
   
