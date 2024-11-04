@@ -4,19 +4,15 @@ import Header from './components/header/Header'
 import Content from './components/TestContent'
 
 function App() {
-
-
   return (
-    <>
-      <div className={styles.appContainer}>
-        <Header></Header>
-        <div className={styles.contentContainer}>
-          {/* future OUtlet */}
-          <Content></Content>
-        </div>
-        <Footer></Footer>
+    <div className={styles.appContainer}>
+      <Header></Header>
+      <div className={styles.contentContainer}>
+        {/* future OUTLET */}
+        <Content></Content>
       </div>
-    </>
+      <Footer></Footer>
+    </div>
   )
 }
 

@@ -1,0 +1,29 @@
+@use "../../styles/mixins";
+@use "../../styles/variables" as *;
+
+.container {
+    @include mixins.flexbox(column, center, center, wrap);
+    height: 209px;
+    background: $backgroud-dark;
+    img {
+        width: 122px;
+        margin-bottom: $spacing-xxl;
+        @include mixins.small-screen {
+            margin-bottom: $spacing-m;
+        }
+    }
+    p {
+        color: $light-text-color;
+        font-size: $font-size-xl;
+        font-weight: $font-weight-m;
+        @include mixins.medium-screen {
+            font-size: $font-size-m;
+        }
+        @include mixins.small-screen {
+            font-size: $font-size-xs;
+            max-width: 133px;
+            text-align: center;
+            line-height: 17.11px
+        }
+    }
+}

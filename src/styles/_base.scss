@@ -1,9 +1,11 @@
+@use "./variables" as *;
+
 body {
     margin: 0;
-    font-family: var(--font-family);
+    font-family: $font-family;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: var(--text-dark);
+    color: $dark-text-color;
   }
   
   h1,

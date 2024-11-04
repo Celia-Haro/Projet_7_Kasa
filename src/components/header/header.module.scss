@@ -1,0 +1,19 @@
+@use "../../styles/mixins";
+
+.container {
+   @include mixins.flexbox();
+    padding: 20px;
+    max-width: 1240px;
+    // width: 86%;
+    margin: auto;
+    nav {
+        display: flex;
+        gap: 57px;
+        a {
+            font-size: 24px;
+            font-weight: 500;
+            color: black;
+        }
+    }
+}
+

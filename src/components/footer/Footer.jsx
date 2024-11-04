@@ -1,7 +1,11 @@
-function Footer() {
+import logowhite from '/src/assets/logo/logowhite.svg'
+import styles from '/src/components/footer/footer.module.scss'
+
+export default function Footer() {
     return (
-        <p className="b3">je suis un footer</p>
+        <footer className={styles.container}>
+            <img src={logowhite} alt="Logo de Kasa"></img>
+            <p>© 2020 Kasa. All rights reserved</p>
+        </footer>
     )
 }
-
-export default Footer
