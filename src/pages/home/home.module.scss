@@ -15,10 +15,11 @@
     }
     @include mixins.medium-screen {
         height: 130px;
+        border-radius: $border-radius-m;
     }
     @include mixins.small-screen {
         margin: $spacing-l;
-        border-radius: $border-radius-m;
+       
         height: 111px;
     }
     img {
@@ -27,7 +28,7 @@
         object-fit: cover;
         opacity: 0.6;
         border-radius: $border-radius-l;
-        @include mixins.small-screen {
+        @include mixins.medium-screen {
             border-radius: $border-radius-m;
         }
     }

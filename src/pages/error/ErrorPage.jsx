@@ -11,7 +11,6 @@ export default function ErrorPage() {
             <Header />
             <div className={styles.contentContainer}>
 
-
                 <h1> {error.status}</h1>
                 <p>
                     <span>Oups ! La page que </span>

@@ -7,9 +7,8 @@
 }
 
 .contentContainer {
-    display: flex;
-    flex-grow: 1;
-    margin: auto;
+    @include mixins.flexbox(column);
+    flex-grow: 1 ;
     width: 100%;
     
 }

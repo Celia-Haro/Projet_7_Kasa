@@ -1,0 +1,55 @@
+@use "../../styles/mixins";
+@use "../../styles/variables" as *;
+
+.collapse {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    @include mixins.large-screen {
+ width: 90%;
+    }
+    
+    details {
+        width: 100%;
+        max-width: 1024px;
+
+        summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            height: 52px;
+            text-align: left;
+            background: #ff6060;
+            color: white;
+            border-radius: 5px;
+            font-size: 24px; 
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        p {
+            padding: 10px;
+            color: black;
+            background: #F6F6F6;
+            text-align: justify;
+            margin-top: 0;
+        }
+    }
+}
+
+
+details[open] {
+    summary {
+        img {
+            transform: rotate(180deg); 
+        }
+    }
+    
+}
