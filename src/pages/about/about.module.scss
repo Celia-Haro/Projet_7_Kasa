@@ -4,9 +4,9 @@
 .collapseContainer {
     @include mixins.flexbox(column);
     gap: $spacing-xxl;
-    margin:  $spacing-l auto;
+    margin:  $spacing-l auto $spacing-xxl;
     @include mixins.small-screen {
         gap: $spacing-l;
-        margin-top: $spacing-s;
+        margin-top: 0;
     }
 }

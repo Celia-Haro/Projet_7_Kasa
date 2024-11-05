@@ -14,7 +14,7 @@ export default function Home() {
 
     return (
         <>
-            <Banner picture={picture1} title={titleHome} />
+            <Banner picture={picture1} title={titleHome} shadow={true} />
             <div className={styles.cardContainer}>
                 {/* {logements.map((logement) => (
                     <RentalCard key={logement.id} logement={logement} />
