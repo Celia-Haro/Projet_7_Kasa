@@ -1,17 +1,20 @@
+import Banner from '../../components/banner/Banner'
 import styles from './home.module.scss'
 import picture1 from '/src/assets/images/image1.png'
 
 
 export default function Home() {
+
+    const titleHome = (
+        <>
+            <span>Chez vous, </span>
+            <span>partout et ailleurs</span>
+        </>
+    );
+
     return (
         <>
-            <div className={styles.banner}>
-                <img src={picture1} alt="je suis une image" />
-                <h1>
-                    <span>Chez vous, </span>
-                    <span>partout et ailleurs</span>
-                </h1>
-            </div>
+            <Banner picture={picture1} title={titleHome} />
             <div className={styles.cardContainer}>
                 {/* {logements.map((logement) => (
                     <RentalCard key={logement.id} logement={logement} />
