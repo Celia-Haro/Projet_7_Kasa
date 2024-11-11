@@ -23,12 +23,12 @@
     grid-template-columns: repeat(2, 340px); 
     gap: $spacing-xxl;
     padding: $spacing-xxl;
-    justify-content: space-around;
+    background: $background-light;
+    justify-content: center;
+    border-radius: 0;
    }
    @include mixins.small-screen {
     grid-template-columns: repeat(1, 100%); 
-    justify-content: center;
-    background: $background-light;
     padding: 17.5px;
     gap: $spacing-l;
    }
