@@ -2,17 +2,34 @@
 @use "../../styles/variables" as *;
 
 
-// .cardContainer {
-//     display: grid; 
-//     grid-template-columns: repeat(3, 340px) ; 
-//     grid-template-rows: auto;
-//     justify-content: space-between;
-//     gap: 30px;
-//     box-sizing: border-box;
-//     max-width: 1240px;
-//     margin: auto;
-//     background: #F6F6F6;
-//     border-radius: 25px;
-//     padding: 50px;
-   
-// }
+.cardContainer {
+    display: grid; 
+    grid-template-columns: repeat(3, 30%); 
+    grid-template-rows: auto;
+    justify-content: space-between;
+    gap: $spacing-section;
+    padding: $spacing-section;
+    box-sizing: border-box;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto $spacing-section;
+    background: $background-grey;
+    border-radius: $border-radius-l;
+    @include mixins.large-screen {
+        gap: $spacing-xl;
+        padding: $spacing-xxl;
+    }
+   @include mixins.medium-screen {
+    grid-template-columns: repeat(2, 340px); 
+    gap: $spacing-xxl;
+    padding: $spacing-xxl;
+    justify-content: space-around;
+   }
+   @include mixins.small-screen {
+    grid-template-columns: repeat(1, 100%); 
+    justify-content: center;
+    background: $background-light;
+    padding: 17.5px;
+    gap: $spacing-l;
+   }
+}
