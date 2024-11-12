@@ -17,9 +17,12 @@ export default function Slideshow({ pictures }) {
     return (
         <div className={styles.slideshowContainer}>
             <img className={styles.slide} src={pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
-            <img className={`${styles.arrow} ${styles.previous}`} onClick={goToPrevious} src="/src/assets/icons/arrow-back.svg" alt="Go to previous picture" />
-            <img className={`${styles.arrow} ${styles.next}`} onClick={goToNext} src="/src/assets/icons/arrow-forward.svg" alt="Go to next picture" />
-            <div className={styles.slideIndex} >{currentIndex + 1}/{pictures.length}</div>
+            {pictures.length > 1 && (
+                <>
+                    <img className={`${styles.arrow} ${styles.previous}`} onClick={goToPrevious} src="/src/assets/icons/arrow-back.svg" alt="Go to previous picture" />
+                    <img className={`${styles.arrow} ${styles.next}`} onClick={goToNext} src="/src/assets/icons/arrow-forward.svg" alt="Go to next picture" />
+                    <div className={styles.slideIndex} >{currentIndex + 1}/{pictures.length}</div>
+                </>)}
         </div>
     )
 }

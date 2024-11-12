@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import logementsData from '/src/assets/data/logements.json';
 import Slideshow from "../../components/gallery/Slideshow";
+import styles from "./rentalPage.module.scss"
 
 export default function RentalPage() {
 
@@ -8,16 +9,43 @@ export default function RentalPage() {
     const logement = logementsData.find((logement) => logement.id === id)
 
     if (logement) {
+        const {
+            id,
+            title,
+            pictures = [],
+            description,
+            host: {
+                name = "Nom indisponible",
+                picture = ""
+            } = {},
+            rating = 0,
+            location,
+            equipments = [],
+            tags = []
+        } = logement;
         return (
-            <div>
-                <h2>{logement.title}</h2>
-                <Slideshow key={logement.id} pictures={logement.pictures} />
+            <div className={styles.content}>
+                <Slideshow key={id} pictures={pictures} />
+                <div className={styles.rentalInfo}>
+                    <div className={styles.blocInfo} >
+                        <div className={styles.headerContainer}>
+                            <h1>{title}</h1>
+                            <p>{location}</p>
+                        </div>
+                        <div className={styles.tagContainer}>
+                            {tags.map((tag) =>
+                                <div className={styles.tag} key={tag}>{tag}</div>
+                            )}
+                        </div>
+                    </div>
+                    <div className={styles.blocHost}>
+                        <p>{name}</p>
+                        <img src={picture} alt={`Photo de ${name}`} />
+                    </div>
+                </div>
+
+
             </div>
         )
-    } else {
-        // Gérer le cas où les données du logement ne sont pas disponibles
-        return <div>Chargement en cours...</div>;
     }
-
 }
-
