@@ -1,0 +1,71 @@
+@use "../../styles/mixins";
+@use "../../styles/variables" as *;
+
+.slideshowContainer {
+    @include mixins.flexbox(row, space-between);
+    max-width: 1240px;
+    width: 100%;
+    height: 415px;
+    margin: auto;
+    position: relative;
+    @include mixins.large-screen {
+        padding: 0 $spacing-l;
+    }
+    @include mixins.medium-screen {
+        height: 320px;
+    }
+    @include mixins.small-screen {
+        padding: 0 $spacing-l ;
+        height: 255px;
+    }
+    .slide {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        border-radius: $border-radius-l;
+        @include mixins.small-screen {
+            border-radius: $border-radius-m;
+        }
+    }
+    .arrow {
+        position: absolute;
+        top: 148px; 
+        color: $light-text-color;
+        cursor: pointer;
+        @include mixins.medium-screen{
+            width: 28px;
+            top: 128px;
+        }
+        @include mixins.small-screen {
+            top: 118px;
+            width: 12px;
+        }
+    }
+    .previous {
+        left: $spacing-xl; 
+        @include mixins.large-screen {
+            left: $spacing-xxl;
+        }
+    }
+    .next {
+        right:$spacing-xl; 
+        @include mixins.large-screen {
+            right: $spacing-xxl;
+        }
+    }
+    .slideIndex {
+        position: absolute;
+        bottom: $spacing-xl; 
+        left: 50%;
+        transform: translateX(-50%);
+        color: $light-text-color;
+        font-size: $font-size-l;
+        @include mixins.medium-screen {
+            bottom: $spacing-l;
+        }
+        @include mixins.small-screen {
+            display: none;
+        }
+    }
+}
+

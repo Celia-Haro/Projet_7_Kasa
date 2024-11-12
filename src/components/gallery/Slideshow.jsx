@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from "react";
+import styles from './slideshow.module.scss'
 
 
 export default function Slideshow({ pictures }) {
@@ -14,13 +15,11 @@ export default function Slideshow({ pictures }) {
         setCurrentIndex((prevIndex) => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1));
     };
     return (
-        <div className="carousel">
-            <img src={pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
-
-            <button onClick={goToPrevious}>Précédent</button>
-            <button onClick={goToNext}>Suivant</button>
-
-            <div className="image-index">{currentIndex + 1} / {pictures.length}</div>
+        <div className={styles.slideshowContainer}>
+            <img className={styles.slide} src={pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+            <img className={`${styles.arrow} ${styles.previous}`} onClick={goToPrevious} src="/src/assets/icons/arrow-back.svg" alt="Go to previous picture" />
+            <img className={`${styles.arrow} ${styles.next}`} onClick={goToNext} src="/src/assets/icons/arrow-forward.svg" alt="Go to next picture" />
+            <div className={styles.slideIndex} >{currentIndex + 1}/{pictures.length}</div>
         </div>
     )
 }
