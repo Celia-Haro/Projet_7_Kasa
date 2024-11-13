@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import logementsData from '/src/assets/data/logements.json';
-import Slideshow from "../../components/gallery/Slideshow";
+import Slideshow from "../../components/slideshow/Slideshow";
 import styles from "./rentalPage.module.scss"
 import Rate from '../../components/rating/Rate';
 import Collapse from "../../components/collapse/Collapse";

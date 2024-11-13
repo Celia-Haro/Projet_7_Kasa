@@ -40,11 +40,17 @@
         @include mixins.large-screen {
             left: $spacing-xxl;
         }
+        @include mixins.small-screen {
+            left: $spacing-l;
+        }
     }
     .next {
         right:$spacing-xl; 
         @include mixins.large-screen {
             right: $spacing-xxl;
+        }
+        @include mixins.small-screen {
+            right: $spacing-l;
         }
     }
     .slideIndex {

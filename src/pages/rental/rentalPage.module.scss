@@ -17,6 +17,9 @@
 
     .rentalInfo {
         @include mixins.flexbox(row, space-between);
+        @include mixins.small-screen {
+            @include mixins.flexbox(column)
+        }
 
         .blocInfo {
             @include mixins.flexbox(column);
@@ -30,9 +33,15 @@
                     color: $primary-color;
                     font-size: $font-size-xxl;
                     font-weight: $font-weight-m;
+                    @include mixins.small-screen {
+                       font-size: $font-size-l;
+                    }
                 }
                 p {
                     font-size: $font-size-l;
+                    @include mixins.small-screen {
+                       font-size: $font-size-s
+                    }
                 }
             }
             
@@ -47,6 +56,11 @@
                     border-radius: $border-radius-m;
                     font-size: $font-size-s;
                     font-weight: $font-weight-l;
+                    @include mixins.small-screen {
+                       font-size: $font-size-xxs;
+                       padding: $spacing-xs $spacing-l;
+                       border-radius: $border-radius-s;
+                    }
                 }
                 
             }
@@ -54,6 +68,9 @@
     
         .otherInfo {
             @include mixins.flexbox(column, space-between, flex-end);
+            @include mixins.small-screen {
+                @include mixins.flexbox(row-reverse, space-between, center)
+            }
             .blocHost {
                 @include mixins.flexbox(row, center, center, wrap);
                 
@@ -83,5 +100,9 @@
     .rentalDetails {
         @include mixins.flexbox(row);
         gap: 76px;
+        @include mixins.small-screen {
+            @include mixins.flexbox(column);
+            gap: $spacing-l;
+        }
     }
 }
