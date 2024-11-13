@@ -2,11 +2,12 @@
 @use "../../styles/variables" as *;
 
 .collapseContainer {
-    @include mixins.flexbox(column);
+    @include mixins.flexbox(column, flex-start, center);
     gap: $spacing-xxl;
     margin:  $spacing-l auto $spacing-xxl;
     @include mixins.small-screen {
         gap: $spacing-l;
         margin-top: 0;
+        padding: 0 $spacing-m;
     }
 }

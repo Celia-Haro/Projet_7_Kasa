@@ -13,13 +13,14 @@
     }
     @include mixins.small-screen {
         padding: 0 $spacing-l ;
+        margin: 0 auto  $spacing-xxl;
     }
 
     .rentalInfo {
         @include mixins.flexbox(row, space-between);
         @include mixins.small-screen {
             @include mixins.flexbox(column);
-            gap: $spacing-m;
+            gap: $spacing-s;
         }
 
         .blocInfo {
