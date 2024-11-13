@@ -6,7 +6,7 @@
     @include mixins.flexbox(column);
     max-width: 1240px;
     width: 100%;
-    margin: auto;
+    margin: $spacing-l auto  $spacing-section;
     gap: $spacing-l;
     @include mixins.large-screen {
         padding: 0 $spacing-l;
@@ -14,61 +14,74 @@
     @include mixins.small-screen {
         padding: 0 $spacing-l ;
     }
-.rentalInfo {
- @include mixins.flexbox(row, space-between);
-}
-    .blocInfo {
-        @include mixins.flexbox(column);
-        gap: $spacing-l;
 
-        .headerContainer {
+    .rentalInfo {
+        @include mixins.flexbox(row, space-between);
+
+        .blocInfo {
             @include mixins.flexbox(column);
-            gap: 2px;
-
-            h1 {
-                color: $primary-color;
-                font-size: $font-size-xxl;
-                font-weight: $font-weight-m;
-            }
-            p {
-                font-size: $font-size-l;
-            }
-        }
-        
-        .tagContainer {
-            @include mixins.flexbox();
-            gap: $spacing-m;
-
-            .tag {
-                background: $primary-color;
-                color: $light-text-color;
-                padding: $spacing-xs $spacing-xl;
-                border-radius: $border-radius-m;
-                font-size: $font-size-s;
-                font-weight: $font-weight-l;
+            gap: $spacing-l;
+    
+            .headerContainer {
+                @include mixins.flexbox(column);
+                gap: 2px;
+    
+                h1 {
+                    color: $primary-color;
+                    font-size: $font-size-xxl;
+                    font-weight: $font-weight-m;
+                }
+                p {
+                    font-size: $font-size-l;
+                }
             }
             
+            .tagContainer {
+                @include mixins.flexbox();
+                gap: $spacing-m;
+    
+                .tag {
+                    background: $primary-color;
+                    color: $light-text-color;
+                    padding: $spacing-xs $spacing-xl;
+                    border-radius: $border-radius-m;
+                    font-size: $font-size-s;
+                    font-weight: $font-weight-l;
+                }
+                
+            }
         }
+    
+        .otherInfo {
+            @include mixins.flexbox(column, space-between, flex-end);
+            .blocHost {
+                @include mixins.flexbox(row, center, center, wrap);
+                
+                p {
+                    width: 60%;
+                    padding-right: $spacing-s;
+                    font-size: $font-size-l;
+                    font-weight: $font-weight-m;
+                    line-height: 26px;
+                    color: $main-text-color;
+                    text-align: right;
+                }
+               
+                img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                }
+                
+            }
+            .rating {
+                color: rgb(255, 157, 0);
+            }
+        } 
     }
 
-    .blocHost {
-        @include mixins.flexbox(row, center, center, wrap);
-        
-        p {
-            width: 60%;
-            padding-right: $spacing-s;
-            font-size: $font-size-l;
-            font-weight: $font-weight-m;
-            line-height: 26px;
-            color: $main-text-color;
-            text-align: right;
-        }
-       
-        img {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-        }
-        
+    .rentalDetails {
+        @include mixins.flexbox();
     }
+    
 }

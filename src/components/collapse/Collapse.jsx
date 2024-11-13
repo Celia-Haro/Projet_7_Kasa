@@ -20,5 +20,8 @@ export default function Collapse({ title, content }) {
 
 Collapse.propTypes = {
     title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
+    content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string)
+    ]).isRequired,
 };

@@ -1,0 +1,8 @@
+@use "../../styles/mixins";
+@use "../../styles/variables" as *;
+
+.rating {
+    @include mixins.flexbox();
+    gap: $spacing-m;
+    padding: $spacing-xs;
+}

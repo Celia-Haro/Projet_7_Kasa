@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import logementsData from '/src/assets/data/logements.json';
 import Slideshow from "../../components/gallery/Slideshow";
 import styles from "./rentalPage.module.scss"
+import Rate from '../../components/rating/Rate';
+import Collapse from "../../components/collapse/Collapse";
 
 export default function RentalPage() {
 
@@ -38,10 +40,18 @@ export default function RentalPage() {
                             )}
                         </div>
                     </div>
-                    <div className={styles.blocHost}>
-                        <p>{name}</p>
-                        <img src={picture} alt={`Photo de ${name}`} />
+                    <div className={styles.otherInfo}>
+                        <div className={styles.blocHost}>
+                            <p>{name}</p>
+                            <img src={picture} alt={`Photo de ${name}`} />
+                        </div>
+                        <Rate rating={Number(rating)} />
                     </div>
+
+                </div>
+                <div className={styles.rentalDetails}>
+                    <Collapse title="Description" content={description}></Collapse>
+                    <Collapse title="Equipements" content={equipments}></Collapse>
                 </div>
 
 
