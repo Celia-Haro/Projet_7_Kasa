@@ -18,7 +18,8 @@
     .rentalInfo {
         @include mixins.flexbox(row, space-between);
         @include mixins.small-screen {
-            @include mixins.flexbox(column)
+            @include mixins.flexbox(column);
+            gap: $spacing-m;
         }
 
         .blocInfo {
@@ -27,7 +28,7 @@
     
             .headerContainer {
                 @include mixins.flexbox(column);
-                gap: 2px;
+                gap: $spacing-xs;
     
                 h1 {
                     color: $primary-color;
@@ -46,8 +47,12 @@
             }
             
             .tagContainer {
-                @include mixins.flexbox();
+                @include mixins.flexbox(row, flex-start, center);
                 gap: $spacing-m;
+                @include mixins.small-screen{
+                    height: 25px;
+                    gap: $spacing-xs;
+                }
     
                 .tag {
                     background: $primary-color;
@@ -58,7 +63,7 @@
                     font-weight: $font-weight-l;
                     @include mixins.small-screen {
                        font-size: $font-size-xxs;
-                       padding: $spacing-xs $spacing-l;
+                       padding: $spacing-xs $spacing-m;
                        border-radius: $border-radius-s;
                     }
                 }
@@ -69,7 +74,7 @@
         .otherInfo {
             @include mixins.flexbox(column, space-between, flex-end);
             @include mixins.small-screen {
-                @include mixins.flexbox(row-reverse, space-between, center)
+                @include mixins.flexbox(row-reverse, space-between, center);
             }
             .blocHost {
                 @include mixins.flexbox(row, center, center, wrap);
@@ -82,17 +87,22 @@
                     line-height: 26px;
                     color: $main-text-color;
                     text-align: right;
+                    @include mixins.small-screen{
+                        font-size: $font-size-xs;
+                        line-height: 17.11px;
+                    }
                 }
                
                 img {
                     width: 64px;
                     height: 64px;
                     border-radius: 50%;
+                    @include mixins.small-screen {
+                        width: 32px;
+                        height: 32px;
+                    }
                 }
                 
-            }
-            .rating {
-                color: rgb(255, 157, 0);
             }
         } 
     }
@@ -100,6 +110,9 @@
     .rentalDetails {
         @include mixins.flexbox(row);
         gap: 76px;
+        @include mixins.large-screen {
+            gap: $spacing-xxl
+        }
         @include mixins.small-screen {
             @include mixins.flexbox(column);
             gap: $spacing-l;

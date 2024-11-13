@@ -6,13 +6,18 @@
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
+    border-radius: $border-radius-s;
     @include mixins.large-screen {
       width: 90%;
+    }
+    @include mixins.small-screen {
+        width: 100%;
     }
     
     details {
         width: 100%;
         max-width: 1024px;
+        border-radius: $border-radius-s;
         
         summary {
             @include mixins.flexbox(row, space-between, center);
@@ -40,6 +45,7 @@
         }
 
         .blocDetail {
+            border-radius: $border-radius-s;
             padding: $spacing-m;
             color: $dark-text-color;
             background: $background-grey;
@@ -49,6 +55,9 @@
             @include mixins.small-screen {
                 font-size: $font-size-xs;
             }  
+            p {
+                padding-bottom: 2px;
+            }
         }
     }
     details[open] {

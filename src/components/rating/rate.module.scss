@@ -5,4 +5,11 @@
     @include mixins.flexbox();
     gap: $spacing-m;
     padding: $spacing-xs;
+    @include mixins.small-screen {
+        gap: $spacing-xs;
+        img {
+            width: 13.5px;
+            height: 13px;
+        }
+    }
 }
