@@ -47,7 +47,14 @@
             text-align: justify;
             margin-top: 0;
             @include mixins.small-screen {
-                font-size: $font-size-xs
+                font-size: $font-size-xs;
+            }
+        };
+        .blocArray {
+
+            padding: $spacing-s;
+            p {
+                padding: 0 0 $spacing-xs;
             }
         }
     }
