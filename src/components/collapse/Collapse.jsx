@@ -12,13 +12,13 @@ export default function Collapse({ title, content }) {
                     <img src={arrow} alt="" />
                 </summary>
                 {Array.isArray(content) ? (
-                    <div className={styles.blocArray} >
+                    <div className={styles.blocDetail} >
                         {content.map((item, index) => (
                             <p key={index}>{item}</p>
                         ))}
                     </div>
                 ) : (
-                    <p>{content}</p>
+                    <p className={styles.blocDetail}>{content}</p>
                 )}
             </details>
         </div>

@@ -2,10 +2,10 @@
 @use "../../styles/variables" as *;
 
 .collapse {
+    @include mixins.flexbox(row);
     width: 100%;
     max-width: 1024px;
-    @include mixins.flexbox(row, center, center);
-    margin: auto;
+    margin: 0 auto;
     @include mixins.large-screen {
       width: 90%;
     }
@@ -13,7 +13,7 @@
     details {
         width: 100%;
         max-width: 1024px;
-
+        
         summary {
             @include mixins.flexbox(row, space-between, center);
             width: 100%;
@@ -39,8 +39,8 @@
             }
         }
 
-        p {
-            padding: $spacing-s;
+        .blocDetail {
+            padding: $spacing-m;
             color: $dark-text-color;
             background: $background-grey;
             font-size: $font-size-l;
@@ -48,25 +48,19 @@
             margin-top: 0;
             @include mixins.small-screen {
                 font-size: $font-size-xs;
-            }
-        };
-        .blocArray {
-
-            padding: $spacing-s;
-            p {
-                padding: 0 0 $spacing-xs;
-            }
+            }  
         }
     }
+    details[open] {
+        summary {
+                img {
+                    transform: rotate(-180deg);
+                    transition: transform 0.2s ease-in;
+                }
+                
+        }
+    }       
 }
 
 
-details[open] {
-    summary {
-            img {
-                transform: rotate(-180deg);
-                transition: transform 0.2s ease-in;
-            }
-            
-    }
-}
+

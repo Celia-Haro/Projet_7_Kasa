@@ -81,7 +81,7 @@
     }
 
     .rentalDetails {
-        @include mixins.flexbox();
+        @include mixins.flexbox(row);
+        gap: 76px;
     }
-    
 }
