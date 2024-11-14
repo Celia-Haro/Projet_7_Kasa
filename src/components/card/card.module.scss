@@ -5,31 +5,43 @@
     width: 100%;
     height: 340px;
     border-radius: $border-radius-m;
-    background: $card-shadow;
-    background-color:$primary-color;
+    position: relative;
     cursor: pointer;
-    @include mixins.small-screen{
+    @include mixins.small-screen {
         height: 255px;
     }
-    img {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 285px;
+        height: 100%;
+        background: $card-shadow;
         border-radius: $border-radius-m;
-        border-bottom-left-radius: 0%;
-        border-bottom-right-radius: 0%;
-        object-fit: cover;
-        @include mixins.small-screen {
-            height: 200px;
-        }
+        z-index: 1;
     }
-    h3 {
-        @include mixins.flexbox(row, flex-start, center);
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        padding: $spacing-xs $spacing-s;
+        height: 100%;
+        border-radius: $border-radius-m;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    h3 {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        width: 50%;
         font-size: $font-size-l;
         font-weight: $font-weight-l;
         color: $light-text-color;
-        text-align: left;
+        z-index: 2; 
         align-items: center;
     }
 }

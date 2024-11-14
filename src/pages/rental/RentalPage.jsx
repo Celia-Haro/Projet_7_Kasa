@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from 'react-router-dom';
 import logementsData from '/src/assets/data/logements.json';
 import Slideshow from "../../components/slideshow/Slideshow";
 import styles from "./rentalPage.module.scss"
@@ -57,5 +57,7 @@ export default function RentalPage() {
 
             </div>
         )
+    } if (!logement) {
+        return <Navigate to="/ErrorPage" />;
     }
 }
