@@ -1,27 +1,18 @@
 import styles from './collapse.module.scss'
 import arrow from '/src/assets/icons/arrow.svg'
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 
 export default function Collapse({ title, content }) {
 
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleOpen = () => {
-        setIsOpen(!isOpen);
-        console.log(isOpen);
-
-    };
-
     return (
         <div className={styles.collapse}>
-            <details key={title} open={isOpen}>
-                <summary onClick={toggleOpen}>
+            <details key={title}>
+                <summary>
                     {title}
                     <img src={arrow} alt="" />
                 </summary>
                 {Array.isArray(content) ? (
-                    <div className={`${styles.blocDetail} ${isOpen ? styles.blocDetailOpen : ''}`} >
+                    <div className={styles.blocDetail} >
                         {content.map((item, index) => (
                             <p key={index}>{item}</p>
                         ))}

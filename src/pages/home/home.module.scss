@@ -29,7 +29,7 @@
    }
    @include mixins.small-screen {
     grid-template-columns: repeat(1, 100%); 
-    padding: 17.5px;
+    padding: $spacing-l;
     gap: $spacing-l;
    }
 }

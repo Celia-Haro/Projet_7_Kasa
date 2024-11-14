@@ -52,11 +52,6 @@
             font-size: $font-size-l;
             text-align: justify;
             margin-top: 0;
-            transform: translateY(-100%);
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: transform 0.3s ease, max-height 0.3s ease, opacity 0.3s ease;
             @include mixins.small-screen {
                 font-size: $font-size-xs;
             }  
@@ -74,12 +69,5 @@
                 transition: transform 0.2s ease-in;
             }    
         }
-        .blocDetailOpen {
-            transform: translateY(0);
-            max-height: 500px; /* Ajustez en fonction du contenu */
-            opacity: 1;
-            overflow: visible;  
-        }
-        
     }       
 }
