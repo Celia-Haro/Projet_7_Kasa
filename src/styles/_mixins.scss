@@ -12,30 +12,27 @@
   flex-wrap: $wrap;
 }
 
-
 // Media Queries
 @mixin small-screen {
-    @media (max-width: 768px) {
-      @content;
-    }
+  @media (max-width: 768px) {
+    @content;
   }
+}
 
 @mixin medium-screen {
-    @media (max-width: 1024px) {
-      @content;
-    }
+  @media (max-width: 1024px) {
+    @content;
   }
-  
-  @mixin large-screen {
-    @media (max-width: 1300px) {
-      @content;
-    }
-  }
+}
 
-    @mixin xlarge-screen {
-      @media (min-width: 1301px) {
-        @content;
-      }
-    }
-  
-  
+@mixin large-screen {
+  @media (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin xlarge-screen {
+  @media (min-width: 1301px) {
+    @content;
+  }
+}

@@ -2,48 +2,48 @@
 @use "../../styles/variables" as *;
 
 .banner {
-    @include mixins.flexbox(row, center, center);
-    margin: 0 auto $spacing-section; 
-    max-width: 1240px;
+  @include mixins.flexbox(row, center, center);
+  margin: 0 auto $spacing-section;
+  max-width: 1240px;
+  width: 100%;
+  height: 223px;
+  @include mixins.large-screen {
+    padding: 0 $spacing-l;
+  }
+
+  @include mixins.small-screen {
+    padding: 0 $spacing-m;
+    height: 111px;
+    margin-bottom: $spacing-l;
+  }
+  img {
     width: 100%;
-    height: 223px;
-    @include mixins.large-screen {
-        padding: 0 $spacing-l;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $border-radius-l;
+    background: $backgroud-dark;
+    filter: brightness(0.6);
+    @include mixins.medium-screen {
+      border-radius: $border-radius-m;
     }
-    
+  }
+  .banner-shadow {
+    box-shadow: $box-shadow;
+  }
+  h1 {
+    position: absolute;
+    font-size: $font-size-h1;
+    color: $light-text-color;
+    font-weight: $font-weight-l;
+    text-shadow: $text-shadow;
+    @include mixins.medium-screen {
+      font-size: $font-size-xxl;
+    }
     @include mixins.small-screen {
-        padding: 0 $spacing-m ;
-        height: 111px;
-        margin-bottom: $spacing-l;
+      @include mixins.flexbox(column);
+      left: 40px;
+      text-shadow: none;
+      font-size: $font-size-xl;
     }
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: $border-radius-l;
-        background: $backgroud-dark;
-        filter: brightness(0.6);
-        @include mixins.medium-screen {
-            border-radius: $border-radius-m;
-        } 
-    }
-    .banner-shadow {
-        box-shadow: $box-shadow;
-    }
-    h1 {
-        position: absolute;
-        font-size: $font-size-h1;
-        color: $light-text-color;
-        font-weight: $font-weight-l;
-        text-shadow: $text-shadow;
-        @include mixins.medium-screen {
-            font-size: $font-size-xxl;
-        }
-        @include mixins.small-screen {
-            @include mixins.flexbox(column);
-            left: 40px;
-            text-shadow: none;
-            font-size: $font-size-xl;
-        }
-    }
+  }
 }

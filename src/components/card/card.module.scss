@@ -2,46 +2,46 @@
 @use "../../styles/variables" as *;
 
 .card {
+  width: 100%;
+  height: 340px;
+  border-radius: $border-radius-m;
+  position: relative;
+  cursor: pointer;
+  @include mixins.small-screen {
+    height: 255px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 340px;
+    height: 100%;
+    background: $card-shadow;
     border-radius: $border-radius-m;
-    position: relative;
-    cursor: pointer;
-    @include mixins.small-screen {
-        height: 255px;
-    }
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: $card-shadow;
-        border-radius: $border-radius-m;
-        z-index: 1;
-    }
+    z-index: 1;
+  }
 
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: $border-radius-m;
-        object-fit: cover;
-        z-index: 0;
-    }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius-m;
+    object-fit: cover;
+    z-index: 0;
+  }
 
-    h3 {
-        position: absolute;
-        left: 15px;
-        bottom: 15px;
-        width: 50%;
-        font-size: $font-size-l;
-        font-weight: $font-weight-l;
-        color: $light-text-color;
-        z-index: 2; 
-        align-items: center;
-    }
+  h3 {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    width: 50%;
+    font-size: $font-size-l;
+    font-weight: $font-weight-l;
+    color: $light-text-color;
+    z-index: 2;
+    align-items: center;
+  }
 }

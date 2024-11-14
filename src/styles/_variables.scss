@@ -1,16 +1,16 @@
 // Colors
-$primary-color: #FF6060;
+$primary-color: #ff6060;
 
 $background-light: #ffffff;
 $background-grey: #f6f6f6;
 $backgroud-dark: black;
 
-$main-text-color: #FF6060;
+$main-text-color: #ff6060;
 $dark-text-color: black;
 $light-text-color: white;
 
 // Fonts
-$font-family: 'Montserrat', sans-serif;
+$font-family: "Montserrat", sans-serif;
 
 $font-size-xxs: 10px;
 $font-size-xs: 12px;
@@ -41,9 +41,12 @@ $border-radius-l: 25px;
 
 // Shadows / Linear
 $box-shadow: 0px 4px 4px 0px #00000040;
-$card-shadow:linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
-$text-shadow:
-1px 1px 0px black, 
--1px 1px 0px black, 
-1px -1px 0px black, 
--1px -1px 0px black;
+$card-shadow: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(10, 10, 10, 0) 42%,
+  rgba(4, 4, 4, 0.205) 99.99%,
+  rgba(0, 0, 0, 0.5) 100%
+);
+$text-shadow: 1px 1px 0px black, -1px 1px 0px black, 1px -1px 0px black,
+  -1px -1px 0px black;

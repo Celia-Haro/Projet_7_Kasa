@@ -1,122 +1,119 @@
 @use "../../styles/mixins";
 @use "../../styles/variables" as *;
 
-
 .content {
-    @include mixins.flexbox(column);
-    max-width: 1240px;
-    width: 100%;
-    margin: $spacing-l auto  $spacing-section;
-    gap: $spacing-l;
+  @include mixins.flexbox(column);
+  max-width: 1240px;
+  width: 100%;
+  margin: $spacing-l auto $spacing-section;
+  gap: $spacing-l;
+  @include mixins.large-screen {
+    padding: 0 $spacing-l;
+  }
+  @include mixins.small-screen {
+    padding: 0 $spacing-l;
+    margin: 0 auto $spacing-xxl;
+  }
+
+  .rentalInfo {
+    @include mixins.flexbox(row, space-between);
+    @include mixins.small-screen {
+      @include mixins.flexbox(column);
+      gap: $spacing-s;
+    }
+
+    .blocInfo {
+      @include mixins.flexbox(column);
+      gap: $spacing-l;
+
+      .headerContainer {
+        @include mixins.flexbox(column);
+        gap: $spacing-xs;
+
+        h1 {
+          color: $primary-color;
+          font-size: $font-size-xxl;
+          font-weight: $font-weight-m;
+          @include mixins.small-screen {
+            font-size: $font-size-l;
+          }
+        }
+        p {
+          font-size: $font-size-l;
+          @include mixins.small-screen {
+            font-size: $font-size-s;
+          }
+        }
+      }
+
+      .tagContainer {
+        @include mixins.flexbox(row, flex-start, center);
+        gap: $spacing-m;
+        @include mixins.small-screen {
+          height: 25px;
+          gap: $spacing-xs;
+        }
+
+        .tag {
+          background: $primary-color;
+          color: $light-text-color;
+          padding: $spacing-xs $spacing-xl;
+          border-radius: $border-radius-m;
+          font-size: $font-size-s;
+          font-weight: $font-weight-l;
+          @include mixins.small-screen {
+            font-size: $font-size-xxs;
+            padding: $spacing-xs $spacing-m;
+            border-radius: $border-radius-s;
+          }
+        }
+      }
+    }
+
+    .otherInfo {
+      @include mixins.flexbox(column, space-between, flex-end);
+      @include mixins.small-screen {
+        @include mixins.flexbox(row-reverse, space-between, center);
+      }
+      .blocHost {
+        @include mixins.flexbox(row, center, center, wrap);
+
+        p {
+          width: 60%;
+          padding-right: $spacing-s;
+          font-size: $font-size-l;
+          font-weight: $font-weight-m;
+          line-height: 26px;
+          color: $main-text-color;
+          text-align: right;
+          @include mixins.small-screen {
+            font-size: $font-size-xs;
+            line-height: 17.11px;
+          }
+        }
+
+        img {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          @include mixins.small-screen {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  .rentalDetails {
+    @include mixins.flexbox(row);
+    gap: 76px;
     @include mixins.large-screen {
-        padding: 0 $spacing-l;
+      gap: $spacing-xxl;
     }
     @include mixins.small-screen {
-        padding: 0 $spacing-l ;
-        margin: 0 auto  $spacing-xxl;
+      @include mixins.flexbox(column);
+      gap: $spacing-l;
     }
-
-    .rentalInfo {
-        @include mixins.flexbox(row, space-between);
-        @include mixins.small-screen {
-            @include mixins.flexbox(column);
-            gap: $spacing-s;
-        }
-
-        .blocInfo {
-            @include mixins.flexbox(column);
-            gap: $spacing-l;
-    
-            .headerContainer {
-                @include mixins.flexbox(column);
-                gap: $spacing-xs;
-    
-                h1 {
-                    color: $primary-color;
-                    font-size: $font-size-xxl;
-                    font-weight: $font-weight-m;
-                    @include mixins.small-screen {
-                       font-size: $font-size-l;
-                    }
-                }
-                p {
-                    font-size: $font-size-l;
-                    @include mixins.small-screen {
-                       font-size: $font-size-s
-                    }
-                }
-            }
-            
-            .tagContainer {
-                @include mixins.flexbox(row, flex-start, center);
-                gap: $spacing-m;
-                @include mixins.small-screen{
-                    height: 25px;
-                    gap: $spacing-xs;
-                }
-    
-                .tag {
-                    background: $primary-color;
-                    color: $light-text-color;
-                    padding: $spacing-xs $spacing-xl;
-                    border-radius: $border-radius-m;
-                    font-size: $font-size-s;
-                    font-weight: $font-weight-l;
-                    @include mixins.small-screen {
-                       font-size: $font-size-xxs;
-                       padding: $spacing-xs $spacing-m;
-                       border-radius: $border-radius-s;
-                    }
-                }
-                
-            }
-        }
-    
-        .otherInfo {
-            @include mixins.flexbox(column, space-between, flex-end);
-            @include mixins.small-screen {
-                @include mixins.flexbox(row-reverse, space-between, center);
-            }
-            .blocHost {
-                @include mixins.flexbox(row, center, center, wrap);
-                
-                p {
-                    width: 60%;
-                    padding-right: $spacing-s;
-                    font-size: $font-size-l;
-                    font-weight: $font-weight-m;
-                    line-height: 26px;
-                    color: $main-text-color;
-                    text-align: right;
-                    @include mixins.small-screen{
-                        font-size: $font-size-xs;
-                        line-height: 17.11px;
-                    }
-                }
-               
-                img {
-                    width: 64px;
-                    height: 64px;
-                    border-radius: 50%;
-                    @include mixins.small-screen {
-                        width: 32px;
-                        height: 32px;
-                    }
-                }
-                
-            }
-        } 
-    }
-
-    .rentalDetails {
-        @include mixins.flexbox(row);
-        gap: 76px;
-        @include mixins.large-screen {
-            gap: $spacing-xxl
-        }
-        @include mixins.small-screen {
-            @include mixins.flexbox(column);
-            gap: $spacing-l;
-        }
-    }
+  }
 }

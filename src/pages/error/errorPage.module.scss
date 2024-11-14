@@ -2,50 +2,48 @@
 @use "../../styles/variables" as *;
 
 .appContainer {
-    @include mixins.flexbox(column);
-    min-height: 100vh;
+  @include mixins.flexbox(column);
+  min-height: 100vh;
 
-    .contentContainer { 
-        @include mixins.flexbox(column, space-evenly, center);
-        flex-grow: 1;
-        margin: auto;
-        width: 100%;
-        max-width: 1240px;
+  .contentContainer {
+    @include mixins.flexbox(column, space-evenly, center);
+    flex-grow: 1;
+    margin: auto;
+    width: 100%;
+    max-width: 1240px;
 
-        h1 {
-            font-size: 288px;
-            color: $main-text-color;
-            @include mixins.medium-screen {
-                font-size: 200px;
-            }
-            @include mixins.small-screen {
-                font-size: 96px;
-            }
-        }
-        p {
-            font-size: $font-size-xxl;
-            color: $main-text-color;
-            @include mixins.medium-screen {
-                font-size: $font-size-xl;
-            }
-            @include mixins.small-screen {
-                font-size: $font-size-l;
-                max-width: 300px;
-                text-align: center;
-                @include mixins.flexbox(column);
-            }
-        }
-        a {
-            font-size: $font-size-l;
-            text-decoration: underline;
-            @include mixins.medium-screen {
-                font-size: $font-size-m;
-            }
-            @include mixins.small-screen {
-                font-size: $font-size-s;
-            }
-        }
+    h1 {
+      font-size: 288px;
+      color: $main-text-color;
+      @include mixins.medium-screen {
+        font-size: 200px;
+      }
+      @include mixins.small-screen {
+        font-size: 96px;
+      }
     }
-    
+    p {
+      font-size: $font-size-xxl;
+      color: $main-text-color;
+      @include mixins.medium-screen {
+        font-size: $font-size-xl;
+      }
+      @include mixins.small-screen {
+        font-size: $font-size-l;
+        max-width: 300px;
+        text-align: center;
+        @include mixins.flexbox(column);
+      }
+    }
+    a {
+      font-size: $font-size-l;
+      text-decoration: underline;
+      @include mixins.medium-screen {
+        font-size: $font-size-m;
+      }
+      @include mixins.small-screen {
+        font-size: $font-size-s;
+      }
+    }
+  }
 }
-

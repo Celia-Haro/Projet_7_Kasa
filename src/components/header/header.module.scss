@@ -2,39 +2,38 @@
 @use "../../styles/variables" as *;
 
 .container {
-   @include mixins.flexbox(row, space-between);
-    padding: $spacing-xxl 0;
-    max-width: 1240px;
-    width: 100%;
-    margin: auto;
-    @include mixins.large-screen {
-        padding: $spacing-xxl $spacing-l;
-    }
+  @include mixins.flexbox(row, space-between);
+  padding: $spacing-xxl 0;
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+  @include mixins.large-screen {
+    padding: $spacing-xxl $spacing-l;
+  }
+  @include mixins.small-screen {
+    padding: $spacing-l;
+  }
+  img {
     @include mixins.small-screen {
-        padding: $spacing-l ;
+      width: 145px;
     }
-    img {
-        @include mixins.small-screen {
-            width: 145px;
-        }
+  }
+  nav {
+    @include mixins.flexbox(row, flex-start, center);
+    gap: $spacing-section;
+    @include mixins.small-screen {
+      gap: $spacing-xxl;
     }
-    nav {
-        @include mixins.flexbox(row, flex-start, center);
-        gap: $spacing-section;
-        @include mixins.small-screen {
-            gap: $spacing-xxl;
-        }
-        a {
-            font-size: $font-size-xl;
-            font-weight: $font-weight-m;
-            @include mixins.medium-screen {
-                font-size: $font-size-l;
-                text-transform: uppercase;
-            }
-            @include mixins.small-screen {
-                font-size: $font-size-xs;
-            }
-        }
+    a {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-m;
+      @include mixins.medium-screen {
+        font-size: $font-size-l;
+        text-transform: uppercase;
+      }
+      @include mixins.small-screen {
+        font-size: $font-size-xs;
+      }
     }
+  }
 }
-
