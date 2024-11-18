@@ -37,11 +37,14 @@
     position: absolute;
     left: 15px;
     bottom: 15px;
-    width: 50%;
+    width: 70%;
     font-size: $font-size-l;
     font-weight: $font-weight-l;
     color: $light-text-color;
     z-index: 2;
     align-items: center;
+    @include mixins.small-screen {
+      width: 85%;
+    }
   }
 }

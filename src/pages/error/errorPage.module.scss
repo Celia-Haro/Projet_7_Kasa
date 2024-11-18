@@ -8,9 +8,12 @@
   .contentContainer {
     @include mixins.flexbox(column, space-evenly, center);
     flex-grow: 1;
-    margin: auto;
+    margin: 0 auto $spacing-section;
     width: 100%;
     max-width: 1240px;
+    @include mixins.small-screen {
+      margin: auto;
+    }
 
     h1 {
       font-size: 288px;
@@ -38,6 +41,7 @@
     a {
       font-size: $font-size-l;
       text-decoration: underline;
+      margin-top: $spacing-xl;
       @include mixins.medium-screen {
         font-size: $font-size-m;
       }

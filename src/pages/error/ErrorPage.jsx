@@ -14,7 +14,7 @@ export default function ErrorPage() {
                 <h1> {error.status}</h1>
                 <p>
                     <span>Oups ! La page que </span>
-                    <span>vous avez demandé n&apos;existe pas.</span>
+                    <span>vous demandez n&apos;existe pas.</span>
                 </p>
                 <Link to="./">Retourner sur la page d&apos;accueil</Link>
 
